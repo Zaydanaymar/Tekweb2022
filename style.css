@@ -14,6 +14,10 @@ body {
   background-color: #4d4545;
 }
 
+.jumbotron img {
+  width: 300px;
+}
+
 #contact {
   background-color: #4d4545;
 }
