@@ -30,12 +30,12 @@
       <div id="app" v-if="true" class="cover">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
-            <div class="col-md-6 text-white">
+            <div class="col-md-6 mb-3 text-white">
               <h1>{{header.title}}</h1>
               <p>{{header.description}}</p>
             </div>
 
-            <div class="col-md-4 align-self-end text-center">
+            <div class="col-md-6 mb-3 align-self-end text-center">
                 <img v-bind:src="header.imageprofile">
             </div>
           </div>
@@ -68,11 +68,11 @@
                   </div>
               </div>
               <div class="row">
-                  <div class="col m6">
+                  <div class="col-md-6 mb-3">
                       <h5>Phototografi </h5>
                       <p>    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus tempore voluptatem eos numquam non eveniet animi. Reiciendis ea qui accusamus repudiandae, eum dolorem inventore sed nisi omnis nemo in aliquam delectus fuga voluptatibus saepe maiores, quibusdam architecto! Facere laborum ipsum similique, doloremque at voluptas dolorum consequatur placeat optio id nam quibusdam quo non iste tenetur quae aperiam, nobis itaque fuga.</p>
                   </div>
-                  <div class="col m6">
+                  <div class="col-md-6 mb-3">
                       <h5 class="light" >Photografi</h5>
                       <div class="progress">
                           <div class="determinate" style="width: 80%"></div>
@@ -102,8 +102,8 @@
                 </div>
             </div>
             <div class="row">
-              <div class="col-md-4 mb-3">
-                <div class="card">
+              <div class="col-md-4 mb-3" v-for="item in articles">
+                <div id="app" class="card">
                   <img v-bind:src="articles.thumbnail" class="card-img-top" alt="Project 1" />
                   <div class="card-body text-white">
                     <h3>{{articles.title}}</h3>

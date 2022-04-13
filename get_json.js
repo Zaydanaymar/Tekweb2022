@@ -2,6 +2,7 @@ Vue.createApp({
   data() {
     return {
       header: {},
+      articles: {},
     };
   },
   methods: {
@@ -21,7 +22,7 @@ Vue.createApp({
         .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/latihan3/contents/articles.json')
         .then((res) => {
           console.log(res.data);
-          this.header = res.data;
+          this.articles = res.data;
         })
         .catch((error) => {
           console.log(error);
@@ -29,6 +30,7 @@ Vue.createApp({
     },
   },
   beforeMount() {
+    this.getHeaderData();
     this.getArticles();
   },
 }).mount('#app');
