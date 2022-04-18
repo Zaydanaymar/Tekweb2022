@@ -2,7 +2,7 @@ Vue.createApp({
   data() {
     return {
       header: {},
-      articles: {},
+      articles: [],
     };
   },
   methods: {

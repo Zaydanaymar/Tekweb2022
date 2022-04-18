@@ -10,9 +10,10 @@
 
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
-    <title>Vue | Instal</title>
+    <title>Portfolio | Zaydan</title>
   </head>
-  <body id="app">
+  <body  >
+    <div >
     <!-- Navbar -->
     <nav class="navbar navbar-light">
       <div class="container">
@@ -27,15 +28,15 @@
     <!-- Jumbotron -->
     <section class="jumbotron text-start">
       <!--Header-->
-      <div v-if="true" class="cover">
+      <div  v-if="true" class="cover">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
-            <div class="col-md-6 text-white">
+            <div class="col-md-6 mb-3 text-white">
               <h1>{{header.title}}</h1>
               <p>{{header.description}}</p>
             </div>
 
-            <div class="col-md-4 align-self-end text-center">
+            <div class="col-md-6 mb-3 align-self-end text-center">
                 <img v-bind:src="header.imageprofile">
             </div>
           </div>
@@ -59,7 +60,7 @@
 
     <!-- About us -->
 
-            <section id="about" class="about scrollspy">
+            <section class="about scrollspy">
               <div class="container">
                 <div class="row text-center mb-3">
                   <div class="title text-center wow fadeInDown mb-5">
@@ -68,11 +69,11 @@
                   </div>
               </div>
               <div class="row">
-                  <div class="col m6">
+                  <div class="col-md-6 mb-3">
                       <h5>Phototografi </h5>
                       <p>    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus tempore voluptatem eos numquam non eveniet animi. Reiciendis ea qui accusamus repudiandae, eum dolorem inventore sed nisi omnis nemo in aliquam delectus fuga voluptatibus saepe maiores, quibusdam architecto! Facere laborum ipsum similique, doloremque at voluptas dolorum consequatur placeat optio id nam quibusdam quo non iste tenetur quae aperiam, nobis itaque fuga.</p>
                   </div>
-                  <div class="col m6">
+                  <div class="col-md-6 mb-3">
                       <h5 class="light" >Photografi</h5>
                       <div class="progress">
                           <div class="determinate" style="width: 80%"></div>
@@ -93,7 +94,7 @@
     <!-- Akhir About us -->
 
     <!-- Blog -->
-    <section id="blog">
+    <section class="blog">
         <div class="container">
             <div class="row text-center mb-3">
                 <div class="title text-center wow fadeInDown mb-5">
@@ -102,12 +103,12 @@
                 </div>
             </div>
             <div class="row">
-              <div class="col-md-4 mb-3">
-                <div class="card">
-                  <img v-bind:src="articles1.thumbnail" class="card-img-top" alt="Project 1" />
+              <div class="col-md-4 mb-3" v-for="item in articles">
+                <div id="app" class="card">
+                  <img v-bind:src="articles.thumbnail" class="card-img-top" alt="Project 1" />
                   <div class="card-body text-white">
-                    <h3>{{articles1.title}}</h3>
-                    <p class="card-text">{{articles1.description}}</p>
+                    <h3>{{articles.title}}</h3>
+                    <p class="card-text">{{articles.description}}</p>
                     <button type="button" href="#" class="btn btn-outline-light">Baca Selengkapnya</button>
                   </div>
                 </div>
@@ -149,7 +150,7 @@
     <!-- Akhir blog -->
 
     <!-- Portofolio -->
-    <section id="porto">
+    <section class="porto">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="title text-center wow fadeInDown mb-5">
@@ -211,7 +212,7 @@
     <!-- Akhir Portofolio -->
 
     <!-- Contact -->
-    <section id="contact">
+    <section class="contact">
         <div class="container">
             <div class="row mb-3">
                 <div class="title text-center wow fadeInDown mb-5">
@@ -243,6 +244,7 @@
 
     </section>
     <!-- Akhir Contact -->
+    </div>
 
 <!-- js -->
 <script
@@ -262,8 +264,7 @@ crossorigin="anonymous"
 ></script>
 <!-- vue js -->
 
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="main.js"></script>
+ 
         
 </body>
 </html>

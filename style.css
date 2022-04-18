@@ -9,20 +9,15 @@ body {
 .navbar-brand {
   color: white;
 }
-.jumbotron {
-  padding-top: 2rem;
-  background-color: #4d4545;
-}
 
-.jumbotron img {
+.cover img {
   width: 300px;
 }
 
 .cover {
+  padding-top: 2rem;
+  background-color: #4d4545;
   position: relative;
-  background-position: center;
-  background-size: cover;
-  height: 400px;
 }
 
 .member-meta {
@@ -86,12 +81,13 @@ body {
   background-color: #ed8d8d;
   -webkit-transition: width 0.3s linear;
   transition: width 0.3s linear;
+  width: 80%;
 }
 
 .progress .indeterminate {
   background-color: #ed8d8d;
 }
 
-#porto {
+.porto {
   background-color: #4d4545;
 }
