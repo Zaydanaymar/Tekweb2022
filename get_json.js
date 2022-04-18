@@ -31,6 +31,5 @@ Vue.createApp({
   },
   beforeMount() {
     this.getHeaderData();
-    this.getArticles();
   },
 }).mount('#app');
