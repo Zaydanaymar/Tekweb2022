@@ -91,33 +91,13 @@
           <div class="border"></div>
         </div>
       </div>
-      <div class="row" v-for="articles" >
-        <div class="col-md-4 mb-3" >
+      <div class="row" >
+        <div class="col-md-4 mb-3">
           <div class="card">
-            <img v-bind:src="articles.thumbnail1" class="card-img-top" alt="">
+            <img v-bind:src="articles.thumbnail" class="card-img-top" alt="">
             <div class="card-body text-white">
-              <h3>{{articles.title1}}</h3>
-              <p>{{articles.description1}}</p>
-              <button type="button" href="#" class=" btn btn-outline-light" >Read</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3" >
-          <div class="card">
-            <img v-bind:src="articles.thumbnail2" class="card-img-top" alt="">
-            <div class="card-body text-white">
-              <h3>{{articles.title2}}</h3>
-              <p>{{articles.description2}}</p>
-              <button type="button" href="#" class=" btn btn-outline-light" >Read</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3" >
-          <div class="card">
-            <img v-bind:src="articles.thumbnail3" class="card-img-top" alt="">
-            <div class="card-body text-white">
-              <h3>{{articles.title3}}</h3>
-              <p>{{articles.description3}}</p>
+              <h3>{{articles.title}}</h3>
+              <p>{{articles.description}}</p>
               <button type="button" href="#" class=" btn btn-outline-light" >Read</button>
             </div>
           </div>
