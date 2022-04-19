@@ -53,7 +53,8 @@
     <!-- Akhir Header -->
 
     <!-- About Us -->
-    <div class="container ">
+    <div class="about">
+          <div class="container ">
       <div class="row text-center mb-3">
         <div class="title wow fadeInDown mb-5">
           <h2>About <span class="color"> Me</span></h2>
@@ -81,30 +82,34 @@
         </div>
       </div>
     </div>
+    </div>
     <!-- Akhir About Us -->
 
     <!-- Articles -->
-    <div class="container">
-      <div class="row text-center mb-3">
-        <div class="title wow fadeInDown mb-5">
-          <h2>My<span class="color"> Articles</span></h2>
-          <div class="border"></div>
+    <div class="articles">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="title wow fadeInDown mb-5">
+            <h2>My<span class="color"> Articles</span></h2>
+            <div class="border"></div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 mb-3" v-for="articles" >
-          <div class="card">
-            <img v-bind:src="articles.thumbnail" class="card-img-top" alt="">
-            <div class="card-body text-white">
-              <h3>{{articles.title}}</h3>
-              <p>{{articles.description}}</p>
-              <button type="button" href="#" class=" btn btn-outline-light" >Read</button>
+        <div class="row">
+          <div class="col-md-4 mb-3" v-for="articles" >
+            <div class="card">
+              <img v-bind:src="articles.thumbnail" class="card-img-top" alt="">
+              <div class="card-body text-white">
+                <h3>{{articles.title}}</h3>
+                <p>{{articles.description}}</p>
+                <button type="button" href="#" class=" btn btn-outline-light" >Read</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Akhir Articles -->
+    
     </div>
 
     <!-- js -->
