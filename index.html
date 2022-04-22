@@ -97,11 +97,11 @@
         <div class="row">
           <div class="col-md-4 mb-3" v-for="articles" >
             <div class="card">
-              <img v-bind:src="articles.thumbnail" class="card-img-top" alt="">
+              <img :src="data.thumbnail" class="card-img-top" alt="">
               <div class="card-body text-white">
-                <h3>{{articles.title}}</h3>
-                <p>{{articles.description}}</p>
-                <button type="button" href="#" class=" btn btn-outline-light" >Read</button>
+                <h3>{{data.title}}</h3>
+                <p>{{data.content}}</p>
+                <button type="button" href="/read.html?article=article_1.md" class=" btn btn-outline-light" >Read</button>
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@
   ></script>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="./get_json.js"></script>
+  <script src="./coba.js"></script>
 
   </body>
 </html>
