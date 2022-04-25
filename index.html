@@ -95,13 +95,14 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 mb-3" v-for="articles" >
+          <div class="col-md-4 mb-3" v-for="data in articles" >
             <div class="card">
-              <img :src="data.thumbnail" class="card-img-top" alt="">
+              <img v-bind:src="data.Thumbnail" class="card-img-top" alt="">
               <div class="card-body text-white">
-                <h3>{{data.title}}</h3>
-                <p>{{data.content}}</p>
-                <button type="button" href="/read.html?article=article_1.md" class=" btn btn-outline-light" >Read</button>
+                <h3>{{data.Title}}</h3>
+                <h5 class="card-text">by : {{ data.Author }}</h5>
+                <p>{{data.Content}}</p>
+                <a href="/read.html?article=article_1.md" class="button">Read</a>
               </div>
             </div>
           </div>

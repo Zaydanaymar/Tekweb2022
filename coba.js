@@ -1,9 +1,8 @@
 Vue.createApp({
   data() {
     return {
-      markdownArticle: null,
-      jsondata: {},
-      link: {},
+      header: {},
+      articles: {},
     };
   },
   methods: {
@@ -18,26 +17,12 @@ Vue.createApp({
           console.log(error);
         });
     },
-    getJsonData() {
+    getArticleData() {
       axios
         .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/main/contents/articles.json')
         .then((res) => {
-          // console.log(res.data);
-          this.jsondata = res.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-    getMarkdownLink() {
-      var converter = new showdown.Converter();
-      axios
-        .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/latihan3/contents/articles.json')
-        .then((res) => {
-          for (var i of Object.keys(res.data)) {
-            this.link = res.data[i].markdown;
-            console.log(this.link);
-          }
+          //console.log(res.data);
+          this.articles = res.data;
         })
         .catch((error) => {
           console.log(error);
@@ -46,7 +31,6 @@ Vue.createApp({
   },
   beforeMount() {
     this.getHeaderData();
-    this.getJsonData();
-    this.getMarkdownLink();
+    this.getArticleData();
   },
 }).mount('#app');
