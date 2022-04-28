@@ -2,7 +2,7 @@ Vue.createApp({
   data() {
     return {
       header: {},
-      articles: {},
+      articles: [],
     };
   },
   methods: {
@@ -21,7 +21,7 @@ Vue.createApp({
       axios
         .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/main/contents/articles.json')
         .then((res) => {
-          //console.log(res.data);
+          console.log(res.data);
           this.articles = res.data;
         })
         .catch((error) => {

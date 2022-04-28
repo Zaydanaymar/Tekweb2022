@@ -102,7 +102,7 @@
                 <h3>{{data.Title}}</h3>
                 <h5 class="card-text">by : {{ data.Author }}</h5>
                 <p>{{data.Content}}</p>
-                <a href="/read.html?article=article_1.md" class="button">Read</a>
+                <a :href="'./read.html?article='+data.markdown" class="button">Read</a>
               </div>
             </div>
           </div>
