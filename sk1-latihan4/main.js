@@ -8,7 +8,7 @@ Vue.createApp({
   methods: {
     getHeaderData() {
       axios
-        .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/main/contents/header.json')
+        .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/main/sk1-latihan4/contents/header.json')
         .then((res) => {
           console.log(res.data);
           this.header = res.data;
@@ -19,7 +19,7 @@ Vue.createApp({
     },
     getArticleData() {
       axios
-        .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/main/contents/articles.json')
+        .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/main/sk1-latihan4/contents/articles.json')
         .then((res) => {
           console.log(res.data);
           this.articles = res.data;
