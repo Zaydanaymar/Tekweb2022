@@ -1,17 +1,18 @@
-### Users
+### User
 
 #### Menampilkan data user
 
 
-GET: /users
+GET: /user
 
 response:
 [
     {
         "id"            : "",
         "nama"          : "",
+        "nim"           : "",
+        "title"         : "",
         "sampul"        : "",
-        "des"           : "",
     },
     ...
 ]
@@ -20,28 +21,29 @@ response:
 #### Menampilkan data user dengan `id` tertentu
 
 
-GET: /users/[id]
+GET: /user/[id]
 
 reponse:
 {
-    "id"            : "",
-    "nama"          : "",
-    "sampul"        : "",
-    "des"           : "",
+        "id"            : "",
+        "nama"          : "",
+        "nim"           : "",
+        "title"         : "",
+        "sampul"        : "",
 }
 
 
 #### Menambahkan data pengguna
 
 
-POST: /users
+POST: /user
 
 data:
 {
-    "id"            : "",
-    "nama"          : "",
-    "sampul"        : "",
-    "des"           : "",
+        "nama"          : "",
+        "nim"           : "",
+        "title"         : "",
+        "sampul"        : "",
 }
 
 response:
@@ -52,14 +54,15 @@ false   // if failure
 #### Edit data pengguna
 
 
-PUT: /users
+PUT: /user
 
 data:
 {
-    "id"            : "",
-    "nama"          : "",
-    "sampul"        : "",
-    "des"           : "",
+        "id"            : "",
+        "nama"          : "",
+        "nim"           : "",
+        "title"         : "",
+        "sampul"        : "",
 }
 
 response:
@@ -71,7 +74,7 @@ false   // if failure
 #### Menghapus data anggota
 
 
-DELETE: /users/[id]
+DELETE: /user/[id]
 
 response:
 true    // if success
@@ -117,14 +120,13 @@ response:
 }
 
 
-#### Menambahkan artikel
+#### Menambahkan data artikel
 
 
 POST: /artikel
 
 data:
 {       
-        "id"            : "",
         "judul"         : "",
         "slug"          : "",
         "penulis"       : "",
@@ -138,7 +140,7 @@ true    // if success
 false   // if failure
 
 
-#### Memperbarui artikel
+#### Mengedit data artikel
 
 
 PUT: /articles
@@ -159,7 +161,7 @@ true    // if success
 false   // if failure
 
 
-#### Menghapus artikel
+#### Menghapus data artikel
 
 
 DELETE: /articles/[id]
@@ -170,12 +172,12 @@ false   // if failure
 
 
 
-### Portofolio
+### Buku Almat
 
-#### Menampilkan data semua portofolio
+#### Menampilkan data semua Buku
 
 
-GET: /portofolio
+GET: /Buku
 
 response:
 [
@@ -188,10 +190,10 @@ response:
 ]
 
 
-#### Menampilkan data portofilio dengan id  tertentu
+#### Menampilkan data buku dengan id  tertentu
 
 
-GET: /portofolio/[id]
+GET: /buku/[id]
 
 response:
 {
@@ -202,10 +204,10 @@ response:
 }
 
 
-#### Menambahkan portofolio
+#### Menambahkan data buku
 
 
-POST: /portofolio
+POST: /buku
 
 data:
 {       
@@ -220,10 +222,10 @@ true    // if success
 false   // if failure
 
 
-#### Memperbarui portofolio
+#### Mengedit data buku
 
 
-PUT: /portofolio
+PUT: /buku
 
 data:
 {      
@@ -238,10 +240,10 @@ true    // if success
 false   // if failure
 
 
-#### Menghapus portofolio
+#### Menghapus data buku
 
 
-DELETE: /portofolio/[id]
+DELETE: /buku/[id]
 
 response:
 true    // if success
@@ -255,6 +257,8 @@ false   // if failure
 ## Desain Database
 
 Desain database untuk menyediakan API Points adalah sebagai berikut:
+
+![Desain database API](https://github.com/Zaydanaymar/tekweb2022/blob/main/api.drawio.png)
 
 ci4
 classDiagram
