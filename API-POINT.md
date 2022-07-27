@@ -250,7 +250,7 @@ response:
 true    // if success
 false   // if failure
 
-
+```
 
 
 ## Desain Database
@@ -258,47 +258,3 @@ false   // if failure
 Desain database untuk menyediakan API Points adalah sebagai berikut:
 
 ![Desain database API](https://github.com/Zaydanaymar/tekweb2022/blob/main/api.drawio.png)
-
-```
-ci4
-classDiagram
-    class Users{
-        # id: int
-        + nama: string
-        + des: string
-        + ig: string
-        + github: string
-        + yt: string
-        + wa: string
-        + sampul: string
-        + getAllUser()
-        + getUserById()
-        + updateUser()
-        + createUser()
-        + deleteUser()
-    }
-    class Buku{
-        # id: int;
-        + nama: string
-        + alamat: string
-        + getAllBuku()
-        + getBukuById()
-        + getBukuByAuthor()
-        + updateBuku()
-        + createBuku()
-        + deleteBuku()
-    }
-    class Artikel{
-        # id: int,
-        + judul: string
-        + slug: string
-        + title: string
-        + deskripsi: string
-        + sampul: string
-        + getAllArticle()
-        + getArticleById()
-        + getArticlesByAuthor()
-        + updateArticle()
-        + createArticle()
-        + deleteArticle()
-    }
